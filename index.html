@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="header">
+                <i class="fa-solid fa-user-graduate"></i> Studex
+                <div class="header-options">
+                    <li id="l-view"><i class="fa-solid fa-user-graduate"></i>View </li>
+                    <li id="l-add"><i class="fa-solid fa-user-plus"></i>Add </li>
+                    <li id="l-update"><i class="fa-solid fa-user-pen"></i>Update </li>
+                    <li id="l-delete"><i class="fa-solid fa-pen-to-square"></i>Delete </li>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="totalStudents-conatiner">
+                <div class="totalStudents">
+                    <div class="totalStudents-left">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="totalStudents-right">
+                        <h3 id="student-count"></h3>
+                        <h3>Total Students</h3>
+                    </div>
+                </div>
+                <div class="totalStudents">
+                    <div class="totalStudents-left" id="active-students">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="totalStudents-right">
+                        <h3 id="student-count">FD</h3>
+                        <h3>Active Students</h3>
+                    </div>
+                </div>
+                <div class="totalStudents">
+                    <div class="totalStudents-left" id="inactive-students">
+                        <i class="fa-solid fa-user-graduate"></i>
+                    </div>
+                    <div class="totalStudents-right">
+                        <h3 id="student-count">FD</h3>
+                        <h3>Inactive Students</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-home" id="right-home">
+                <table border="2" id="table">
+                </table>
+
+            </div>
+            <div class="add-student" id="add-student">
+                <input type="text" placeholder="Enter name" id="username">
+                <input type="text" placeholder="Enter batch" id="batch">
+                <input type="text" placeholder="Enter city" id="city">
+                <button id="add">Add Student</button>
+            </div>
+
+            <div class="delete-student" id="delete-student" >
+                DELETE OPERATION
+                <input type="text" id="deleteName" placeholder="Enter name to delete...">
+                <button id="deleteBtn">Delete</button>
+
+            </div>
+            <div class="update-student" id="update-student">
+                Edit details
+                <input type="text" id="editingPersonName" placeholder="Enter name of person to edit">
+                <button id="editBtn">Start</button>
+                <div id="editingDeatils">
+                    <h1>Update Details</h1>
+                    <input type="text" id="ename">
+                    <input type="text" id="ebatch">
+                    <input type="text" id="ecity">
+                    <button id="UpdateDetails">Update</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
+
