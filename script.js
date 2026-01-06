@@ -195,6 +195,7 @@ deleteBtn.addEventListener("click", () => {
             addRow(i.username, i.batch, i.city);
         }
 
+        
     }
 })
 
