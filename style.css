@@ -11,6 +11,9 @@
 i{
     margin-right: 10px;
 }
+body{
+    overflow: hidden;
+}
 input{
     width: 400px;
     padding: 10px 15px;
@@ -20,8 +23,9 @@ input{
     font-size: 20px;
     border: none;
 }
-tr,th{
+tr,th, td{
     height: 50px;
+    cursor: pointer;
 }
 button{
     width: 400px;
@@ -165,6 +169,8 @@ input::placeholder{
 .right-home{
     
     display: none;
+    flex-direction: column;
+    gap: 3rem;
     height: 60vh;
     width: 90%;
     background-color: var(--body-bg-color);
@@ -251,7 +257,6 @@ input::placeholder{
     padding: 1rem 2rem;
     border-radius: 13px;
     
-    /* background-color: var(--body-bg-color); */
 }
 #editingDeatils h1{
     text-align: center;
@@ -282,8 +287,34 @@ input::placeholder{
     border: 1px solid var(--logo-color);
 }
 
-@media (max-width: 1240px){
+/* @media (max-width: 1240px){
     body{
         display: none;
     }
+} */
+.find-by-id{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+
+   background-color: var(--body-bg-color) ;
+}
+.find-by-id button{
+    background-color: #70e000;
+    color: white;
+}
+
+#getAllUsers{
+    background-color: #219ebc;
+    color: white;
+}
+#userNotFound{
+    display: none;
+    height: 60vh;
+    background-color: var(--body-bg-color) ;
+    align-items: center;
+    justify-content: center;
+}
+#userNotFound img{
+    margin-left: 230px;
 }

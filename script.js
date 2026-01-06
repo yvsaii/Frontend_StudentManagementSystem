@@ -14,6 +14,10 @@ let ecity = document.getElementById("ecity");
 let UpdateDetails = document.getElementById("UpdateDetails");
 let totalStudents = document.getElementById("student-count");
 
+let find_By_batch_input = document.getElementById("findByIdInput");
+let find_By_batch_button = document.getElementById("findByIdButton");
+let get_all_users = document.getElementById("getAllUsers");
+let user_not_found = document.getElementById("userNotFound");
 
 //SHIFTING BLOCKS
 
@@ -213,7 +217,6 @@ editBtn.addEventListener("click", () => {
                     alert("Invalid");
                     return;
                 }
-                console.log("Updating")
 
                 ename = document.getElementById("ename");
                 ebatch = document.getElementById("ebatch");
@@ -248,6 +251,42 @@ editBtn.addEventListener("click", () => {
     }
 })
 
+
+//FINDING BY BATCH
+
+find_By_batch_button.addEventListener("click",()=>{
+    if(find_By_batch_input.value == ""){
+        alert("Enter the valid input man!!");
+        return;
+    }
+    table.textContent="";
+    addingHeading();
+    let temp = false;
+    for(let i of details){
+        if(i.batch.toLowerCase() == find_By_batch_input.value.toLowerCase()){
+            addRow(i.username,i.batch,i.city);
+            temp=true;
+        }
+
+    }
+    if(!temp){
+        table.textContent="";
+        user_not_found.style.display="block";
+        find_By_batch_input.value="";
+    }
+
+})
+
+get_all_users.addEventListener("click",()=>{
+    find_By_batch_input.value="";
+    user_not_found.style.display="none";
+    table.textContent="";
+    addingHeading();
+    
+    for(let i of details){
+        addRow(i.username,i.batch,i.city);
+    }
+})
 
 
 
