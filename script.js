@@ -187,6 +187,7 @@ deleteBtn.addEventListener("click", () => {
         details.splice(index, 1);
         table.textContent = "";
         localStorage.setItem("details", JSON.stringify(details));
+        alert("Successfully deleted!!");
         updatingStudentCount();
         deletingName.value = "";
         addingHeading();
